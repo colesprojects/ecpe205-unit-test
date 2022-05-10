@@ -71,4 +71,36 @@ class CalculatorTest {
                 Arguments.of(new int[]{7,2,8,3,4})
         );
     }
+    
+    @Test
+    public void computeExponentTest() {
+        ComputeExponent ce = new ComputeExponent();
+        assertEquals(625, ce.computeExponent(5, 4));
+        assertEquals(1296, ce.computeExponent(6, 4));
+        assertEquals(81, ce.computeExponent(9, 2));
+        assertEquals(128, ce.computeExponent(2, 7));
+        assertEquals(512, ce.computeExponent(8, 3));
+    }
+    
+    @Test
+    public void computeFactorial() {
+        ComputeFactorial cf = new ComputeFactorial();
+        assertEquals(720, cf.computeFactorial(6));
+        assertEquals(0, cf.computeFactorial(-1));
+        assertEquals(362880, cf.computeFactorial(9));
+        assertEquals(6, cf.computeFactorial(3));
+        assertEquals(24, cf.computeFactorial(4));
+    }
+    
+    @Test
+    public void isPalindrome() {
+        IsPalindrome ipTest = new IsPalindrome();
+
+        assertEquals(true, ipTest.isPalindrome("redivider"));
+        assertEquals(false, ipTest.isPalindrome("word"));
+        assertEquals(true, ipTest.isPalindrome("civic"));
+        assertEquals(false, ipTest.isPalindrome("word2"));
+        assertEquals(true, ipTest.isPalindrome("radar"));
+
+    }
 }
